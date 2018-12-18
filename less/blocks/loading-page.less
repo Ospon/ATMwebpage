@@ -1,0 +1,29 @@
+.loading-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 0 0 5%;
+
+    &__title {
+        width: 50%;
+        margin: 150px 0;
+    }
+
+    &__title-photo {
+        width: 50%;
+        background: url(../img/main-img.jpg) no-repeat center left;
+        background-size: cover;
+    }
+
+    &__btn {
+        display: inline-block;
+        padding: 15px 20px;
+        background-color: @main-blue;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 10px;
+    }
+    &__btn::hover {
+        text-decoration: none;
+    }
+}

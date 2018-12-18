@@ -1,0 +1,38 @@
+.page-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: @black;
+    color: @base-color;
+
+
+    &__logotype {
+        margin-right: 30px;
+    }
+
+    &__nav {
+       flex-grow: 1;
+    }
+
+    &__nav ul {
+        margin: 0;
+    }
+
+    &__nav ul li {
+        display: inline-block;
+        padding: 0 1%;
+        margin-right: 30px;
+    }
+
+    &__contacts {
+        justify-self: flex-end;
+    }
+
+    &__btn {
+        color: @base-color;
+        text-decoration: none;
+        display: inline-block;
+    }
+}
