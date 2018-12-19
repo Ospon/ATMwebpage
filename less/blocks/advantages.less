@@ -1,0 +1,40 @@
+.advantages {
+    background-color: @grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 60px 5%;
+
+    &__item {
+        position: relative;
+        width: 18%;
+        padding: 30px 0 40px;
+        margin-right: 50px;
+    }
+
+    &__item span {
+        position: absolute;
+        color: @base-color;
+        top: 0px;
+        left: 0px;
+        font-weight: 700;
+        font-size: 4em;
+        z-index: 1;
+    }
+   
+    &__item p {
+        position: relative;
+        z-index: 10;
+    }
+
+    &__item p::after {
+        position: absolute;
+        content: '';
+        left: 0;
+        bottom: -20px;
+        width: 13%;
+        height: 1px;
+        background-color: #fff;
+    }
+}
