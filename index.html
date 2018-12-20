@@ -13,6 +13,8 @@
   <link href="css/style.css" rel="stylesheet">
   <link rel="icon" href="img/favicon-32x32.png" type="image/png">
   <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/png">
+  <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
 </head>
 
 <body>
@@ -203,24 +205,25 @@
     </section>
     <section class="clients">
       <h3>Клиенты</h3>
-      <div class="owl-carousel owl-theme">
-        <div class="item">
+      <div class="owl-carousel">
+        <div class="owlItem">
           <span>Банк</span>
-          <img src="img/clients/otkritie.png" alt="">
+          <img src="img/clients/otkritie.png" width="203" height="40" alt="">
           <p>Разработка и внедрение: Web-Extension, ATM Map, Личный кабинет, ПО по Распространение контента на УС</p>
         </div>
-        <div class="item">
+        <div class="owlItem">
           <span>Банк</span>
-          <img src="img/clients/otkritie.png" alt="">
-          <p>Разработка и внедрение: Web-Extension, ATM Map, Личный кабинет, ПО по Распространение контента на УС</p>
+          <img src="img/clients/sberbank.png" width="162" height="40" alt="">
+          <p>Внедрение и круглосуточная поддержка Автоматизированной системы приема платежей MassPay, разработка и
+            внедрение Web-Extension, Осуществлена возможность принимать Транспортные и Газовые карты</p>
         </div>
-        <div class="item">
+        <div class="owlItem">
           <span>Банк</span>
-          <img src="img/clients/otkritie.png" alt="">
-          <p>Разработка и внедрение: Web-Extension, ATM Map, Личный кабинет, ПО по Распространение контента на УС</p>
+          <img src="img/clients/domodedovo.png" width="193" height="34" alt="">
+          <p>Таможня Домодедово - осуществление возможности заполнения таможенной декларации и оплата таможенной
+            пошлины на УС</p>
         </div>
       </div>
-
     </section>
     <section class="partners">
       <h3>Партнеры</h3>
@@ -269,5 +272,34 @@
     </div>
   </div>
 </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://media.newjobs.com/ftpinta/xom000442dex/xom000442dex_e023.js"></script>
+<script>
+  $(document).ready(function () {
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 1,
+      nav: true,
+      autoplay: true,
+      autoplayHoverPause: true,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+
+        700: {
+          items: 1
+        },
+        1000: {
+          items: 2
+        },
+        1200: {
+          items: 3
+        }
+      }
+    })
+  })
+</script>
 
 </html>

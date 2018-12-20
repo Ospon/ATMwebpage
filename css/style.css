@@ -316,13 +316,6 @@ h1 {
 h3 {
   font-size: 2em;
 }
-.item {
-  width: 250px;
-}
-.owl-carousel {
-  padding: 0 100px;
-  width: auto;
-}
 .page-header {
   display: -ms-flexbox;
   display: flex;
@@ -535,8 +528,51 @@ h3 {
 .services p {
   margin-top: 0;
 }
+.owlItem {
+  font-size: 0.8em;
+  padding: 0 10%;
+}
+.owlItem span {
+  font-size: 1em;
+  color: #5A6BF7;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+.owl-carousel {
+  padding: 0 100px;
+  width: auto;
+}
+.owl-carousel .owl-nav button.owl-next {
+  position: absolute;
+  right: -20px;
+  top: 30%;
+  content: '';
+  background: url(../img/arrowRight.svg  ) no-repeat;
+  height: 40px;
+  width: 40px;
+  font-size: 0px;
+}
+.owl-carousel .owl-nav button.owl-prev {
+  position: absolute;
+  left: -20px;
+  top: 30%;
+  content: '';
+  background: url(../img/arrowleft.svg) no-repeat;
+  height: 40px;
+  width: 40px;
+  font-size: 0px;
+}
 .clients {
-  padding: 30px 5%;
+  padding: 30px 5% 60px;
+  background: #EBECF7;
+}
+@media (max-width: 500px), print {
+  .owl-carousel .owl-nav button.owl-prev {
+    left: -5px;
+  }
+  .owl-carousel .owl-nav button.owl-next {
+    right: -5px;
+  }
 }
 .partners {
   padding: 60px 5%;
