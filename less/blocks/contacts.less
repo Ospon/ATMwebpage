@@ -1,6 +1,10 @@
 .contacts {
     padding: 0;
 
+    &__mapWrapper {
+        height: 650px;
+    }
+
     &__address {
         height: 550px;
         width: 20%;
@@ -9,7 +13,7 @@
         flex-direction: column;
         justify-content: space-between;
         background: rgba(24, 24, 36, 0.9);
-        margin-top: -657px;
+        margin-top: -650px;
         position: relative;
         z-index: 10;
         color: #fff;
@@ -35,5 +39,33 @@
     &__item a {
         color: #fff;
         text-decoration: none;
+    }
+}
+
+@media screen and (max-width: @tablet) {
+    .contacts {
+        &__address {
+            margin-top: 0;
+            width: auto;
+            height: auto;
+        }
+        &__mapWrapper {
+            height: 450px;
+        }
+        &__item {
+          
+        }
+    }
+}
+
+@media screen and (max-width: @mobile) {
+    .contacts {
+        &__address {
+            margin-top: 0;
+            width: auto;
+        }
+        &__mapWrapper {
+            height: 250px;
+        }
     }
 }

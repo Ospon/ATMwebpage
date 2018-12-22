@@ -19,20 +19,21 @@
 
 <body>
   <header class="page-header">
+    <a class="toggle-nav" href="#">&#9776;</a>
     <div class="page-header__logotype">
       <img src="img/logo.svg" alt="Телематика Сервис логотип">
     </div>
     <div class="page-header__nav">
-      <ul>
-        <li>О компании</li>
-        <li>Продукты</li>
-        <li>Усгули</li>
-        <li>Клиенты</li>
-        <li>Партнеры</li>
+      <ul class="active">
+        <li class="current-item"><a id="aboutClick">О компании</a></li>
+        <li><a id="productsClick">Продукты</a></li>
+        <li><a id="serviceClick">Услуги</a></li>
+        <li><a id="clientsClick">Клиенты</a></li>
+        <li><a id="partnersClick">Партнеры</a></li>
       </ul>
     </div>
     <div class="page-header__contacts">
-      <a class="page-header__btn" href="#">Контакты</a>
+      <a class="page-header__btn" id="contactsClick">Контакты</a>
     </div>
   </header>
   <main>
@@ -48,6 +49,7 @@
       <div class="loading-page__title-photo"></div>
     </section>
     <section class="description">
+      <a name="aboutAnchor" />
       <div class="description__item">
         <img src="img/point-icon-1.svg" alt="point image">
         <p>Повышайте рентабельность терминальной сети за счёт увеличения прямых и косвенных продаж продуктов Банка и
@@ -96,10 +98,11 @@
         </p>
       </div>
     </section>
+    <a name="productsAnchor" />
     <section class="productOne">
       <p>система управления банкоматоми</p>
       <h2>WebIUS</h2>
-      <img src="img/WebIUS.png" alt="Изображение WebIUS">
+      <img class="productOne__webIUS" src="img/WebIUS.png" alt="Изображение WebIUS">
     </section>
     <section class="advantages">
       <div class="advantages__item">
@@ -139,7 +142,7 @@
     <section class="productTwo">
       <p>интерфейс взаимодействия с банкоматами</p>
       <h2>Web-Extension</h2>
-      <img src="img/Web-Extension.png" alt="Изображение Web-Extension">
+      <img class="productTwo__webExtension" src="img/Web-Extension.png" alt="Изображение Web-Extension">
     </section>
     <section class="advantages">
       <div class="advantages__item">
@@ -173,6 +176,7 @@
       <div class="advantages__item"></div>
     </section>
     <section class="services">
+      <a name="serviceAnchor" />
       <h3>Услуги</h3>
       <div class="services__wrapper">
         <div class="services__item">
@@ -204,6 +208,7 @@
       </div>
     </section>
     <section class="clients">
+      <a name="clientsAnchor" />
       <h3>Клиенты</h3>
       <div class="owl-carousel">
         <div class="owlItem">
@@ -226,6 +231,7 @@
       </div>
     </section>
     <section class="partners">
+      <a name="partnersAnchor" />
       <h3>Партнеры</h3>
       <div class="partners__logoWrapper">
         <div><img src="img/partners/smardcards.png" alt=""></div>
@@ -238,8 +244,12 @@
       </div>
     </section>
     <section class="contacts">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2243.2209802720836!2d37.626207270671316!3d55.78940065569594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b535f5f276e8ab%3A0xfade27624525f89b!2sTrifonovskaya+Ulitsa%2C+57%D0%B0%2C+Moskva%2C+Russia%2C+129272!5e0!3m2!1sen!2scz!4v1545242023629"
-        width="100%" height="650" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <a name="contactsAnchor" />
+      <div class="contacts__mapWrapper">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2243.2209802720836!2d37.626207270671316!3d55.78940065569594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b535f5f276e8ab%3A0xfade27624525f89b!2sTrifonovskaya+Ulitsa%2C+57%D0%B0%2C+Moskva%2C+Russia%2C+129272!5e0!3m2!1sen!2scz!4v1545242023629"
+          width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+      </div>
       <div class="contacts__address">
         <h3>Контакты</h3>
         <div class="contacts__item">
@@ -300,6 +310,48 @@
       }
     })
   })
+
+  function scrollToAnchor(aid) {
+    var aTag = $("a[name='" + aid + "']");
+    $('html,body').animate({
+      scrollTop: aTag.offset().top
+    }, 'slow');
+  }
+
+  $("#aboutClick").click(function () {
+    scrollToAnchor('aboutAnchor');
+  });
+  $("#serviceClick").click(function () {
+    scrollToAnchor('serviceAnchor');
+  });
+  $("#productsClick").click(function () {
+    scrollToAnchor('productsAnchor');
+  });
+  $("#clientsClick").click(function () {
+    scrollToAnchor('clientsAnchor');
+  });
+  $("#partnersClick").click(function () {
+    scrollToAnchor('partnersAnchor');
+  });
+  $("#contactsClick").click(function () {
+    scrollToAnchor('contactsAnchor');
+  });
+
+  jQuery(document).ready(function () {
+    jQuery('.toggle-nav').click(function (e) {
+      jQuery(this).toggleClass('active');
+      jQuery('.page-header__nav ul').toggleClass('active');
+      e.preventDefault();
+    });
+  });
+
+  jQuery(document).ready(function () {
+    jQuery('.page-header__nav ul li').click(function (e) {
+      jQuery(this).toggleClass('active');
+      jQuery('.page-header__nav ul').addClass('active');
+      e.preventDefault();
+    });
+  });
 </script>
 
 </html>
