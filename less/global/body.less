@@ -1,8 +1,10 @@
 body {
+    position: relative;
     font-family: 'Montserrat', sans-serif;
     font-size: @main-font-size;
     width: 100%;
     line-height: 1.5;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -15,7 +17,14 @@ h3 {
 
 
 @media screen and (max-width: @mobile) {
+    h1 {
+        font-size: 2em;
+    }
+
     body {
-        font-size: @small-font-size;
+        
+    }
+    h3 {
+        font-size: @h3-size-mobile;
     }
 }

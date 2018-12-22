@@ -55,15 +55,22 @@
     }
 
     &__btn {
-        color: @second-color;
+        color: @base-color;
         padding: 15px 45px;
-        background-color: @base-color;
+        background-color: none;
+        border: 1px solid @base-color;
         border-radius: 10px;
         text-decoration: none;
         display: inline-block;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
         font-weight: 700;
         font-size: 1em;
+        cursor: pointer;
+    }
+    
+    &__btn:hover {
+        background-color: @base-color;
+        color: @second-color;
     }
 }
 
@@ -75,7 +82,10 @@
 
 @media screen and (max-width: @tablet) {
     .page-header {
-        position: sticky;
+        position: fixed;
+        top: 0;
+        width: 90%;
+        z-index: 100;
 
         &__nav {
             
@@ -85,10 +95,10 @@
             display: block;
             position: absolute;
             left: 0;
-            top: 90px;
+            top: 89px;
             width: 100%;
             background: rgba(0,0,0,0.95);
-            min-height: 300px;
+            height: 100vh;
             padding: 40px 5%;
             text-align: left;
         }
@@ -131,5 +141,13 @@
 		text-decoration:none;
 		color:@base-color;
     }
-    
+    main {
+        padding-top: 89px;
+    }
 }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
