@@ -21,7 +21,7 @@
   <header class="page-header">
     <a class="toggle-nav" href="#">&#9776;</a>
     <div class="page-header__logotype">
-      <img src="img/logo.svg" alt="Телематика Сервис логотип">
+     <a class="page-header__logo" href="#"> <img src="img/logo.svg" alt="Телематика Сервис логотип"></a>
     </div>
     <div class="page-header__nav">
       <ul class="active">
@@ -44,12 +44,13 @@
         <p>Текст за счет чего можно именно этот функционал банкоматов и терминалов расширить. Короткое описание
           основных преимуществ.
           Можно и в три строки, еще какй-то другой текст.</p>
-        <a class="loading-page__btn" href="#">Узнать подробнее</a>
+        <a class="loading-page__btn" id="showMoreClick">Узнать подробнее</a>
       </div>
       <div class="loading-page__title-photo"></div>
     </section>
+    <a name="aboutAnchor" />
     <section class="description">
-      <a name="aboutAnchor" />
+      
       <div class="description__item">
         <img src="img/point-icon-1.svg" alt="point image">
         <p>Повышайте рентабельность терминальной сети за счёт увеличения прямых и косвенных продаж продуктов Банка и
@@ -142,7 +143,7 @@
     <section class="productTwo">
       <p>интерфейс взаимодействия с банкоматами</p>
       <h2>Web-Extension</h2>
-      <img class="productTwo__webExtension" src="img/Web-Extension.png" alt="Изображение Web-Extension">
+      <img class="productTwo__webExtension" src="img/Web-Extension-@x1.png" alt="Изображение Web-Extension">
     </section>
     <section class="advantages">
       <div class="advantages__item">
@@ -213,18 +214,18 @@
       <div class="owl-carousel">
         <div class="owlItem">
           <span>Банк</span>
-          <img src="img/clients/otkritie.png" width="203" height="40" alt="">
+          <img class="clientsImg" src="img/clients/otkritie.png" width="" height="" alt="">
           <p>Разработка и внедрение: Web-Extension, ATM Map, Личный кабинет, ПО по Распространение контента на УС</p>
         </div>
         <div class="owlItem">
           <span>Банк</span>
-          <img src="img/clients/sberbank.png" width="162" height="40" alt="">
+          <img src="img/clients/sberbank.png" width="" height="" alt="">
           <p>Внедрение и круглосуточная поддержка Автоматизированной системы приема платежей MassPay, разработка и
             внедрение Web-Extension, Осуществлена возможность принимать Транспортные и Газовые карты</p>
         </div>
         <div class="owlItem">
           <span>Банк</span>
-          <img src="img/clients/domodedovo.png" width="193" height="34" alt="">
+          <img src="img/clients/domodedovo.png" width="" height="" alt="">
           <p>Таможня Домодедово - осуществление возможности заполнения таможенной декларации и оплата таможенной
             пошлины на УС</p>
         </div>
@@ -325,6 +326,9 @@
     scrollToAnchor('serviceAnchor');
   });
   $("#productsClick").click(function () {
+    scrollToAnchor('productsAnchor');
+  });
+  $("#showMoreClick").click(function () {
     scrollToAnchor('productsAnchor');
   });
   $("#clientsClick").click(function () {

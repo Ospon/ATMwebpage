@@ -316,6 +316,11 @@ h1 {
 h3 {
   font-size: 2em;
 }
+@media screen and (max-width: 650px) {
+  body {
+    font-size: 0.8em;
+  }
+}
 .page-header {
   display: -ms-flexbox;
   display: flex;
@@ -331,6 +336,9 @@ h3 {
 }
 .page-header__logotype {
   margin-right: 30px;
+}
+.page-header__logo {
+  max-width: 135px;
 }
 .page-header__nav {
   -ms-flex-positive: 1;
@@ -358,8 +366,8 @@ h3 {
   position: absolute;
   content: '';
   width: 110%;
-  height: 4px;
-  bottom: -33px;
+  height: 2px;
+  bottom: -15px;
   left: -5%;
   background-color: #fff;
 }
@@ -384,7 +392,8 @@ h3 {
 }
 @media screen and (max-width: 1200px) {
   .page-header {
-    position: relative;
+    position: -webkit-sticky;
+    position: sticky;
   }
   .page-header__nav ul {
     display: block;
@@ -441,6 +450,8 @@ h3 {
       flex-direction: row;
   -ms-flex-pack: justify;
       justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 60px 5%;
   border-top: 2px solid #EBECF7;
 }
@@ -471,7 +482,7 @@ h3 {
 }
 .loading-page__title-photo {
   width: 50%;
-  background: url(../img/main-img.jpg) no-repeat center left;
+  background: url(../img/main-img2.jpg) no-repeat center left;
   background-size: cover;
 }
 .loading-page__btn {
@@ -548,6 +559,17 @@ h3 {
   }
   .numbers__col--line {
     width: 5%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .numbers {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+  }
+  .numbers__col {
+    width: 100%;
   }
 }
 .productOne {
@@ -724,6 +746,11 @@ h3 {
 .clients {
   padding: 30px 5% 60px;
   background: #EBECF7;
+}
+.clientsImg {
+  max-width: 200px;
+  height: auto;
+  width: 100%;
 }
 @media (max-width: 500px), print {
   .owl-carousel .owl-nav button.owl-prev {

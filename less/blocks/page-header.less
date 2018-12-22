@@ -12,6 +12,10 @@
         margin-right: 30px;
     }
 
+    &__logo {
+        max-width: 135px;
+    }
+
     &__nav {
        flex-grow: 1;
     }
@@ -40,8 +44,8 @@
         position: absolute;
         content: '';
         width: 110%;
-        height: 4px;
-        bottom: -33px;
+        height: 2px;
+        bottom: -15px;
         left: -5%;
         background-color: #fff;
     }
@@ -71,7 +75,7 @@
 
 @media screen and (max-width: @tablet) {
     .page-header {
-        position: relative;
+        position: sticky;
 
         &__nav {
             
