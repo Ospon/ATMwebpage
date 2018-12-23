@@ -464,7 +464,17 @@ h3 {
   top: 0;
   width: 100%;
 }
+@media screen and (max-width: 650px) {
+  .page-header__btn {
+    padding: 10px 10px;
+    font-size: 0.7em;
+  }
+}
 .description {
+  padding: 60px 5%;
+  border-top: 2px solid #EBECF7;
+}
+.description__wrapper {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
@@ -473,8 +483,6 @@ h3 {
       justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 60px 5%;
-  border-top: 2px solid #EBECF7;
 }
 .description__item {
   width: calc(26%);
