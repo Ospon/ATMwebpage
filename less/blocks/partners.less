@@ -8,6 +8,7 @@
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
+        max-width: 1900px;
     }
 
     &__logoWrapper div {
@@ -26,13 +27,14 @@
 
 @media screen and (max-width: @tablet) {
     .partners {
+        padding: 50px 5% 20px;
 
         &__logoWrapper {
             justify-content: flex-start;
         }
 
         &__logoWrapper div {
-            margin: 40px;
+            margin: 40px 40px 40px 0;
         }
     }
 }

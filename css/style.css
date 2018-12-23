@@ -514,6 +514,7 @@ h3 {
   text-decoration: none;
   border-radius: 10px;
   cursor: pointer;
+  margin-top: 20px;
 }
 .loading-page__btn:hover {
   text-decoration: none;
@@ -546,7 +547,11 @@ h3 {
     height: 240px;
   }
   .loading-page__title h1 {
-    font-size: 1.5em;
+    font-size: 1.4em;
+    padding-right: 5%;
+  }
+  .loading-page__title p {
+    padding-right: 5%;
   }
 }
 .numbers {
@@ -673,6 +678,7 @@ h3 {
 @media screen and (max-width: 650px) {
   .advantages__item {
     width: 100%;
+    padding: 20px 0;
   }
   .advantages__item:last-child {
     margin-bottom: 0;
@@ -739,6 +745,12 @@ h3 {
     margin-top: 2em;
   }
 }
+@media screen and (max-width: 650px) {
+  .services__item {
+    width: 100%;
+    margin-top: 3em;
+  }
+}
 .owlItem {
   font-size: 0.8em;
   padding: 0 10%;
@@ -789,6 +801,10 @@ h3 {
   .owl-carousel .owl-nav button.owl-next {
     right: -5px;
   }
+  .clients {
+    padding: 30px 5% 10px;
+    background: #EBECF7;
+  }
 }
 .partners {
   padding: 60px 5%;
@@ -804,6 +820,7 @@ h3 {
       align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  max-width: 1900px;
 }
 .partners__logoWrapper div {
   margin-right: 30px;
@@ -816,12 +833,15 @@ h3 {
   height: auto;
 }
 @media screen and (max-width: 1200px) {
+  .partners {
+    padding: 50px 5% 20px;
+  }
   .partners__logoWrapper {
     -ms-flex-pack: start;
         justify-content: flex-start;
   }
   .partners__logoWrapper div {
-    margin: 40px;
+    margin: 40px 40px 40px 0;
   }
 }
 .contacts {
