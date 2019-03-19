@@ -1,8 +1,8 @@
 {
-  "name": "portfolio",
+  "name": "ATMwebpage",
   "version": "0.1.0",
   "private": true,
-  "description": "Konstantin Torkhov portfolio",
+  "description": "Web page for ATM software producer",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "6.7.x",
